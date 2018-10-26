@@ -33384,3 +33384,56 @@ td-md-is-safari
 .td-ss-main-sidebar .image_2 {
   margin-bottom: 70px;
 }
+
+.contact_for_ads_right{
+  margin-bottom: 50px;
+  text-align: right;
+}
+
+.ads_top{
+  margin: 20px  auto 40px auto;
+  padding: 0px 0px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.ads_top ul {
+  margin: 0px;
+  list-style: none;
+  display: inline-block;
+}
+
+.ads_top ul li {
+  display: inline-block;
+  margin: 0px;
+  padding: 10px 6px;
+  border-right: 0.5px dotted;
+  border-color: #ddd;
+}
+
+.ads_top ul li:last-child {
+  border-right: none;
+}
+
+.ads_top ul li img {
+
+}
+
+
+@media (max-width: 1140px) {
+  .ads_top ul li:nth-child(3) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .ads_top ul li:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .ads_top ul li {
+    border-right: none;
+  }
+}

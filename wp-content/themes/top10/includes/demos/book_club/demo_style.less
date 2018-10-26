@@ -1,0 +1,43 @@
+@import "../../less_files/variables.less";
+
+
+.td-book-club-demo {
+  .sf-menu > .current-menu-item > a,
+  .sf-menu > .current-menu-ancestor > a,
+  .sf-menu > .current-category-ancestor > a,
+  .sf-menu > li:hover > a,
+  .sf-menu > .sfHover > a {
+    color: @td_theme_color !important;
+
+    &:after {
+      background-color: transparent;
+    }
+  }
+
+  .block-title {
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    border-color: transparent;
+    background-color: #25262e;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 17px;
+      bottom: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 8px 0 8px;
+      border-color: #25262e transparent transparent transparent;
+    }
+  }
+
+  .block-title span {
+    padding-left: 17px;
+
+    background-color: #25262e;
+    color: #fff;
+  }
+}

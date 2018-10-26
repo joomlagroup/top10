@@ -1,0 +1,43 @@
+/*  ----------------------------------------------------------------------------
+    responsive settings
+*/
+/* responsive landscape tablet */
+/* responsive portrait tablet */
+/* responsive portrait phone */
+.td-book-club-demo .sf-menu > .current-menu-item > a,
+.td-book-club-demo .sf-menu > .current-menu-ancestor > a,
+.td-book-club-demo .sf-menu > .current-category-ancestor > a,
+.td-book-club-demo .sf-menu > li:hover > a,
+.td-book-club-demo .sf-menu > .sfHover > a {
+  color: #4db2ec !important;
+}
+.td-book-club-demo .sf-menu > .current-menu-item > a:after,
+.td-book-club-demo .sf-menu > .current-menu-ancestor > a:after,
+.td-book-club-demo .sf-menu > .current-category-ancestor > a:after,
+.td-book-club-demo .sf-menu > li:hover > a:after,
+.td-book-club-demo .sf-menu > .sfHover > a:after {
+  background-color: transparent;
+}
+.td-book-club-demo .block-title {
+  position: relative;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  border-color: transparent;
+  background-color: #25262e;
+}
+.td-book-club-demo .block-title:after {
+  content: '';
+  position: absolute;
+  left: 17px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: #25262e transparent transparent transparent;
+}
+.td-book-club-demo .block-title span {
+  padding-left: 17px;
+  background-color: #25262e;
+  color: #fff;
+}

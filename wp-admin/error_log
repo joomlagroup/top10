@@ -1,0 +1,6 @@
+[20-Jul-2017 03:12:25 UTC] WordPress database error Unknown column 'wjesp_' in 'field list' for query SELECT wjesp_
+[27-Apr-2018 02:06:22 UTC] WordPress database error Table 'top10tph_top10tphcm.wjesp_yoast_seo_links' doesn't exist for query 
+			SELECT COUNT( id ) AS incoming, target_post_id AS post_id
+			FROM wjesp_yoast_seo_links
+			WHERE target_post_id IN(748,318)
+			GROUP BY target_post_id made by edit_post, wp_update_post, wp_insert_post, do_action('save_post'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, WPSEO_Link_Watcher->save_post, WPSEO_Link_Watcher->process, WPSEO_Link_Content_Processor->process, WPSEO_Link_Content_Processor->update_link_counts, WPSEO_Link_Content_Processor->update_incoming_links, WPSEO_Meta_Storage->update_incoming_link_count

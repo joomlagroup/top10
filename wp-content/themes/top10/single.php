@@ -32,6 +32,21 @@ $td_mod_single = new td_module_single($post);
                         </div>
                         <div class="td-pb-span4 td-main-sidebar" role="complementary">
                             <div class="td-ss-main-sidebar">
+
+                                 <?php $image_1 = get_field('image_1'); ?>
+                                 <?php $image_2 = get_field('image_2'); ?>
+                                 <?php if($image_1): ?>
+                                 <div class="image_1">
+                                    <img src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                 </div>
+                                 <?php endif; ?>
+
+                                <?php if($image_2): ?>
+                                    <div class="image_2">
+                                        <img src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['alt']; ?>" />
+                                    </div>
+                                <?php endif; ?>
+
                                 <?php get_sidebar(); ?>
                             </div>
                         </div>

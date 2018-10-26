@@ -33376,3 +33376,11 @@ td-md-is-safari
 .td-block-title-wrap {
   position: relative;
 }
+
+.td-ss-main-sidebar .image_1 {
+  margin-bottom: 20px;
+}
+
+.td-ss-main-sidebar .image_2 {
+  margin-bottom: 70px;
+}

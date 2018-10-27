@@ -33437,3 +33437,43 @@ td-md-is-safari
     border-right: none;
   }
 }
+
+
+/* top */
+#list_tops .item_dsp_row {
+    border-bottom: 5px solid #ff9800;
+}
+
+#list_tops h4 {
+    margin-top: 10px;
+}
+
+#list_tops .item .left_item {
+    display: table-cell;
+    vertical-align: top;
+    padding: 10px 10px 0px 0px;
+    border-right:1px dotted #ccc;
+}
+
+#list_tops .item .right_item {
+    display: table-cell;
+    vertical-align: top;
+    text-align: justify;
+    padding: 10px 0px 10px 10px;
+}
+
+.badged_small {
+    height: 50px;
+    width: 50px;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #bbdefb;
+    margin: auto;
+    padding: 6px;
+    font-size: 26px;
+    background: #0091ea;
+    color: #ff9800;
+    line-height: 33px;
+}

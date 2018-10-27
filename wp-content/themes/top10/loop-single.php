@@ -49,6 +49,43 @@ if (have_posts()) {
         ?>
 
         <?php echo $td_mod_single->get_content();?>
+            <!-- item top -->
+            <div id="list_tops">
+                <?php for ($i=1;$i<=3;$i++):
+                    $item_title = get_field('item_title_top_'.$i);
+                    $item_content = get_field('item_content_top_'.$i);
+                ?>
+
+                <?php if($i==1 and $item_title): ?>
+                    <div class="item_dsp_row" style="margin-top: 0px;"></div>
+                <?php endif; ?>
+
+                <?php if($item_content): ?>
+                <div class="item">
+
+                    <div class="left_item pull-left  hidden-xs">
+                        <div class="text-center">
+                            <span class="badged_small"><?php echo $i; ?></span>
+                            <p style="margin-top: 4px;">2 likes</p>
+                        </div>
+                    </div>
+
+                    <div class="right_item">
+                        <h4><?php echo $item_title; ?></h4>
+                        <div class="item_content">
+                            <?php echo $item_content; ?>
+                        </div>
+                    </div>
+
+
+                </div>
+                <?php endif; ?>
+
+
+
+                <?php endfor; ?>
+            </div>
+            <!--end item tops -->
         </div>
 <div class="related-posts">
 <?php

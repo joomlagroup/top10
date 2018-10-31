@@ -49,43 +49,57 @@ if (have_posts()) {
         ?>
 
         <?php echo $td_mod_single->get_content();?>
-            <!-- item top -->
-            <div id="list_tops">
-                <?php for ($i=1;$i<=3;$i++):
-                    $item_title = get_field('item_title_top_'.$i);
-                    $item_content = get_field('item_content_top_'.$i);
-                ?>
-
-                <?php if($i==1 and $item_title): ?>
+            <!-- list top -->
+            <?php
+            $top_list = get_field('top_list' );
+            if( $top_list ): ?>
+                <div id="list_tops">
                     <div class="item_dsp_row" style="margin-top: 0px;"></div>
-                <?php endif; ?>
 
-                <?php if($item_content): ?>
-                <div class="item">
+                    <?php
+                    $arr_title = array();
+                    // loop through the rows of data
+                    foreach ($top_list as $key => $item):
+                        $title = $item['item_title_top'];
+                        $content  = $item['item_content_top'];
+                        $arr_title[]= $title;
+                    ?>
 
-                    <div class="left_item pull-left  hidden-xs">
-                        <div class="text-center">
-                            <span class="badged_small"><?php echo $i; ?></span>
-                            <p style="margin-top: 4px;">2 likes</p>
+                    <div id="item_list<?php echo $key + 1 ?>" class="item">
+                        <div class="top_item">
+                            <div class="left_item pull-left">
+                                <div class="text-center">
+                                    <span class="badged_small"><?php echo $key + 1; ?></span>
+                                </div>
+                            </div>
+                            <div class="right_item">
+                                <h4><?php echo $title; ?></h4>
+                            </div>
+                            <div class="clearfix"></div>
                         </div>
+
+                        <div class="mid_item">
+                            <div class="left_item pull-left  hidden-xs"></div>
+                            <div class="right_item">
+                                <div class="item_content">
+                                    <?php echo $content ?>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
 
-                    <div class="right_item">
-                        <h4><?php echo $item_title; ?></h4>
-                        <div class="item_content">
-                            <?php echo $item_content; ?>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
 
-
+                    <ul class="sticky circle_link">
+                        <?php foreach ($arr_title as $key => $val): ?>
+                            <a class="btn-primary" data-tooltip="<?php echo $val ?>" href="#item_list<?php echo $key + 1 ?>"><?php echo $key + 1 ?></a>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
-                <?php endif; ?>
-
-
-
-                <?php endfor; ?>
-            </div>
-            <!--end item tops -->
+            <?php endif; ?>
+            <!-- end list top -->
         </div>
 <div class="related-posts">
 <?php
@@ -132,3 +146,8 @@ wp_reset_query();
     //no posts
     echo td_page_generator::no_posts();
 }
+
+?>
+
+
+

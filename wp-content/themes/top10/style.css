@@ -33393,87 +33393,234 @@ td-md-is-safari
 .ads_top{
   margin: 20px  auto 40px auto;
   padding: 0px 0px;
-  border: 1px solid #ddd;
   border-radius: 10px;
 }
 
 .ads_top ul {
   margin: 0px;
   list-style: none;
-  display: inline-block;
+  display: block;
 }
 
 .ads_top ul li {
   display: inline-block;
   margin: 0px;
-  padding: 10px 6px;
-  border-right: 0.5px dotted;
-  border-color: #ddd;
+  padding: 0px;
 }
 
-.ads_top ul li:last-child {
-  border-right: none;
-}
+
 
 .ads_top ul li img {
-
+  text-align: left;
 }
 
+.ads_top .pull-left {
+  float: left;
+}
+
+.ads_top .item_banner {
+  padding-right: 10px;
+}
+
+.ads_top .item_banner:last-child {
+  padding-right: 0px;
+}
 
 @media (max-width: 1140px) {
-  .ads_top ul li:nth-child(3) {
-    border-right: none;
+
+  .ads_top .item_banner {
+    width: 50%;
   }
 }
 
-@media (max-width: 768px) {
-  .ads_top ul li:nth-child(2) {
-    border-right: none;
-  }
-}
+
 
 @media (max-width: 540px) {
-  .ads_top ul li {
-    border-right: none;
+  .ads_top .item_banner {
+    padding-right: 5px;
   }
 }
 
 
 /* top */
 #list_tops .item_dsp_row {
-    border-bottom: 5px solid #ff9800;
+ /* border-bottom: 5px solid #ff9800; */
 }
 
 #list_tops h4 {
-    margin-top: 10px;
+  margin: 0px;
 }
 
-#list_tops .item .left_item {
-    display: table-cell;
-    vertical-align: top;
-    padding: 10px 10px 0px 0px;
-    border-right:1px dotted #ccc;
+#list_tops .item {
+  /*border-top: 2px solid #c92130;*/
+}
+
+#list_tops .item .top_item {
+  border:2px solid #c92130;
+  border-right:none;
+}
+
+.top_item .left_item {
+  min-width: 52px;
+  border-right:2px solid #c92130;
+  display: table-cell;
+  vertical-align: top;
+  padding: 0px 10px 0px 0px;
+}
+
+ .mid_item .left_item {
+   display: table-cell;
+   vertical-align: top;
+   padding: 0px 0px 0px 0px;
+   border-right:2px solid #c92130;
+   min-width: 64px;
 }
 
 #list_tops .item .right_item {
-    display: table-cell;
-    vertical-align: top;
-    text-align: justify;
-    padding: 10px 0px 10px 10px;
+  display: table-cell;
+  vertical-align: top;
+  text-align: justify;
+  padding: 10px 0px 10px 10px;
 }
 
 .badged_small {
-    height: 50px;
-    width: 50px;
+  height: 50px;
+  width: 50px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: 6px;
+  font-size: 26px;
+  background: #c92130;
+  color: #fff;
+  line-height: 33px;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 30px;
+  bottom: 2px;
+  z-index: 100;
+  display: table-cell;
+  align-content: center;
+  margin-bottom: 8px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #c92130;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+
+.circle_link a:hover {
+  text-decoration: none !important;
+}
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #eee;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+
+  .top_item .left_item, .top_item .right_item,.mid_item .left_item, .mid_item .right_item {
+    width: 100%;
+    float: none;
     display: block;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 50%;
-    background: #bbdefb;
-    margin: auto;
-    padding: 6px;
-    font-size: 26px;
-    background: #0091ea;
-    color: #ff9800;
-    line-height: 33px;
+  }
+
+  #list_tops .item .top_item {
+    border: none;
+  }
+
+  .badged_small {
+    margin: 0px 0px 0px 0px;
+    width: 40px;
+    height: 40px;
+    padding: 1px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .top_item h4 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .top_item .left_item {
+    border-top: 2px solid #c92130;
+  }
+
+  #list_tops .item .right_item {
+    padding-bottom: 0px;
+  }
+
+  .top_item .left_item {
+    border-right: 0px;
+  }
+
+  .sticky {
+    left: 0px;
+    padding: 0px 20px;
+  }
 }

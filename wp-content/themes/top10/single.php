@@ -19,52 +19,37 @@ $td_mod_single = new td_module_single($post);
 
             <!-- ads here -->
             <div class="td-pb-span12">
-            <?php
-            $image_top_1 = get_field('image_top_1');
-            $image_top_2 = get_field('image_top_2');
-            $image_top_3 = get_field('image_top_3');
-            $image_top_4 = get_field('image_top_4');
-            ?>
-            <div class="ads_top">
-            <?php if($image_top_1 or $image_top_2 or $image_top_3 or $image_top_4): ?>
-                <ul>
-                    <?php if($image_top_1): ?>
-                    <li><img src="<?php echo $image_top_1['url']; ?>" alt="<?php echo $image_top_1['alt']; ?>"  /></li>
-                    <?php endif; ?>
+                <?php
+                $image_top_1 = get_field('image_top_1');
+                $image_top_2 = get_field('image_top_2');
+                ?>
+                <div class="ads_top">
+                    <?php if($image_top_1 or $image_top_2): ?>
+                        <div class="">
+                            <?php if($image_top_1): ?>
+                                <div class="pull-left item_banner">
+                                    <img src="<?php echo $image_top_1['url']; ?>" alt="<?php echo $image_top_1['alt']; ?>"  />
+                                </div>
+                            <?php endif; ?>
 
-                    <?php if($image_top_2): ?>
-                        <li><img src="<?php echo $image_top_2['url']; ?>" alt="<?php echo $image_top_2['alt']; ?>"  /></li>
-                    <?php endif; ?>
+                            <?php if($image_top_2): ?>
+                                <div class="pull-left item_banner">
+                                    <img src="<?php echo $image_top_2['url']; ?>" alt="<?php echo $image_top_2['alt']; ?>"  />
+                                </div>
+                            <?php endif; ?>
 
-                    <?php if($image_top_3): ?>
-                        <li><img src="<?php echo $image_top_3['url']; ?>" alt="<?php echo $image_top_3['alt']; ?>"  /></li>
-                    <?php endif; ?>
+                            <div class="clearfix"></div>
+                        </div>
 
-                    <?php if($image_top_4): ?>
-                        <li><img src="<?php echo $image_top_4['url']; ?>" alt="<?php echo $image_top_4['alt']; ?>"  /></li>
+                    <?php else: ?>
+                        <ul>
+                            <li><a href="<?php echo site_url('/lien-he'); ?>">
+                                    <img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  />
+                                </a>
+                            </li>
+                        </ul>
                     <?php endif; ?>
-                </ul>
-            <?php else: ?>
-                <ul>
-                    <li><a href="<?php echo site_url('/lien-he'); ?>">
-                            <img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  />
-                        </a>
-                    </li>
-                    <li><a href="<?php echo site_url('/lien-he'); ?>">
-                            <img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  />
-                        </a>
-                    </li>
-                    <li><a href="<?php echo site_url('/lien-he'); ?>">
-                            <img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  />
-                        </a>
-                    </li>
-                    <li><a href="<?php echo site_url('/lien-he'); ?>">
-                            <img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  />
-                        </a>
-                    </li>
-                </ul>
-            <?php endif; ?>
-            </div>
+                </div>
             </div>
             <!-- end ads here -->
 
@@ -153,3 +138,6 @@ $td_mod_single = new td_module_single($post);
 <?php
 
 get_footer();
+
+?>
+

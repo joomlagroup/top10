@@ -157,3 +157,10 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
 }
 
 //print_r(td_global::$all_theme_panels_list);
+
+add_action('wp_enqueue_scripts', 'theme_register_js');
+
+function theme_register_js(){
+    $jsUrl = get_template_directory_uri() . '/js';
+    wp_enqueue_script('script_1', $jsUrl.'/custom.js',array('jquery'),'1.0',true);
+}

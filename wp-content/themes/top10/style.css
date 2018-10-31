@@ -33449,6 +33449,7 @@ td-md-is-safari
 
 #list_tops h4 {
   margin: 0px;
+  text-align: left;
 }
 
 #list_tops .item {

@@ -33624,3 +33624,16 @@ td-md-is-safari
     padding: 0px 20px;
   }
 }
+
+
+@media screen and (min-width: 1400px) {
+  .sticky{
+    left: 100px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .sticky{
+    left: 200px;
+  }
+}

@@ -28,13 +28,21 @@ $td_mod_single = new td_module_single($post);
                         <div class="">
                             <?php if($image_top_1): ?>
                                 <div class="pull-left item_banner">
-                                    <img src="<?php echo $image_top_1['url']; ?>" alt="<?php echo $image_top_1['alt']; ?>"  />
+                                    <a target="_blank" href="<?php echo get_field('link_image_top_1');  ?>" rel="nofollow"><img src="<?php echo $image_top_1['url']; ?>" alt="<?php echo $image_top_1['alt']; ?>"  /></a>
                                 </div>
                             <?php endif; ?>
 
                             <?php if($image_top_2): ?>
                                 <div class="pull-left item_banner">
-                                    <img src="<?php echo $image_top_2['url']; ?>" alt="<?php echo $image_top_2['alt']; ?>"  />
+                                    <a target="_blank" href="<?php echo get_field('link_image_top_2');  ?>" rel="nofollow"><img src="<?php echo $image_top_2['url']; ?>" alt="<?php echo $image_top_2['alt']; ?>"  /></a>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if(!$image_top_1 or !$image_top_2): ?>
+                                <div class="pull-left item_banner">
+                                    <a target="_blank" href="<?php echo site_url('/lien-he'); ?>">
+                                        <img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  />
+                                    </a>
                                 </div>
                             <?php endif; ?>
 
@@ -76,18 +84,24 @@ $td_mod_single = new td_module_single($post);
 
                                      <?php if($image_1): ?>
                                      <div class="image_1">
-                                        <img src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                        <a target="_blank" href="<?php echo get_field('link_image_1');  ?>" rel="nofollow"><img src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" /></a>
                                      </div>
                                      <?php endif; ?>
                                      <?php if($image_2): ?>
                                         <div class="image_2">
-                                            <img src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['alt']; ?>" />
+                                            <a target="_blank" href="<?php echo get_field('link_image_2');  ?>" rel="nofollow"><img src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['alt']; ?>" /></a>
                                         </div>
+                                     <?php endif; ?>
+
+                                     <?php if(!$image_1 or !$image_2): ?>
+                                         <div class="contact_for_ads_right">
+                                             <a rel="nofollow" target="_blank" href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.jpg' ?>"  /></a>
+                                         </div>
                                      <?php endif; ?>
 
                                  <?php else: ?>
                                 <div class="contact_for_ads_right">
-                                    <a href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.jpg' ?>"  /></a>
+                                    <a rel="nofollow" target="_blank" href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.jpg' ?>"  /></a>
                                 </div>
                                 <?php endif; ?>
 

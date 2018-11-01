@@ -33447,9 +33447,11 @@ td-md-is-safari
  /* border-bottom: 5px solid #ff9800; */
 }
 
-#list_tops h4 {
+#list_tops .h2_title {
   margin: 0px;
   text-align: left;
+  font-size: 21px;
+  line-height: 38px;
 }
 
 #list_tops .item {
@@ -33481,7 +33483,7 @@ td-md-is-safari
   display: table-cell;
   vertical-align: top;
   text-align: justify;
-  padding: 10px 0px 10px 10px;
+  padding: 5px 0px 5px 10px;
 }
 
 .badged_small {
@@ -33583,7 +33585,7 @@ td-md-is-safari
 
 
 @media (max-width: 768px) {
-
+  /*
   .top_item .left_item, .top_item .right_item,.mid_item .left_item, .mid_item .right_item {
     width: 100%;
     float: none;
@@ -33619,6 +33621,7 @@ td-md-is-safari
   .top_item .left_item {
     border-right: 0px;
   }
+  */
 
   .sticky {
     left: 0px;

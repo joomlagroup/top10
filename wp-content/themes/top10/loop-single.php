@@ -73,7 +73,7 @@ if (have_posts()) {
                                 </div>
                             </div>
                             <div class="right_item">
-                                <h4><?php echo $title; ?></h4>
+                                <h2 class="h2_title"><?php echo $title; ?></h2>
                             </div>
                             <div class="clearfix"></div>
                         </div>

@@ -479,6 +479,7 @@ class Widget extends \WP_Widget {
 			if( !isset ( $instance["hide_title"] ) ) {
 				if( isset( $instance["separate_categories"] ) && $instance["separate_categories"] ) { 
 					// Separate categories: title to array
+                    if($categories):
 					foreach($categories as $cat) {
 						$widgetHTML[$cat->name]['ID'] = $cat->term_id;
 						if( isset ( $instance["title_link"] ) ) {
@@ -497,6 +498,7 @@ class Widget extends \WP_Widget {
 							$widgetHTML[$cat->name]['title'] = $title;
 						}
 					}
+                 endif;
 				} else {
 					// ! Separate categories: echo
 					echo $before_title;

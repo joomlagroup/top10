@@ -41,7 +41,7 @@ $td_mod_single = new td_module_single($post);
                             <?php if(!$image_top_1 or !$image_top_2): ?>
                                 <div class="pull-left item_banner">
                                     <a target="_blank" href="<?php echo site_url('/lien-he'); ?>">
-                                        <img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  />
+                                        <img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.gif' ?>"  />
                                     </a>
                                 </div>
                             <?php endif; ?>
@@ -52,10 +52,10 @@ $td_mod_single = new td_module_single($post);
                     <?php else: ?>
                         <div>
                             <div class="pull-left item_banner">
-                                <a href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  /></a>
+                                <a href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.gif' ?>"  /></a>
                             </div>
                             <div class="pull-left item_banner">
-                                <a href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.jpg' ?>"  /></a>
+                                <a href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao-top.gif' ?>"  /></a>
                             </div>
 
                             <div class="clearfix"></div>
@@ -99,14 +99,14 @@ $td_mod_single = new td_module_single($post);
 
                                      <?php if(!$image_1 or !$image_2): ?>
                                          <div class="contact_for_ads_right">
-                                             <a rel="nofollow" target="_blank" href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.jpg' ?>"  /></a>
+                                             <a rel="nofollow" target="_blank" href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.gif' ?>"  /></a>
                                          </div>
                                      <?php endif; ?>
 
                                  <?php else: ?>
                                 <div class="contact_for_ads_right">
-                                    <a rel="nofollow" target="_blank" href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.jpg' ?>"  /></a>
-                                    <a rel="nofollow" target="_blank" href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.jpg' ?>"  /></a>
+                                    <a rel="nofollow" target="_blank" href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.gif' ?>"  /></a>
+                                    <a rel="nofollow" target="_blank" href="<?php echo site_url('/lien-he'); ?>"><img src="<?php echo get_template_directory_uri().'/images/ads/lien-he-quang-cao.gif' ?>"  /></a>
                                 </div>
                                 <?php endif; ?>
 

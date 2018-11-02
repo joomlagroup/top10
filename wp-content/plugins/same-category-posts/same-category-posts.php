@@ -375,11 +375,14 @@ class Widget extends \WP_Widget {
 		// Get taxonomies
 		$taxonomies = null;
 		$taxes = get_object_taxonomies( $post );
+
 		$categories = null;
 		foreach ($taxes as $tax) {
 			$post_type = $instance['post_types'][$tax]['post_type'];
 			if ($tax == $instance['include_tax'][$post_type]) {
 				$terms = get_the_terms($post->ID, $tax);
+				if(!$terms)
+				    return;
 				if ($terms) {
 					foreach ($terms as $term) {
 						$taxonomies[$tax][] = $term->term_id; 
@@ -498,7 +501,7 @@ class Widget extends \WP_Widget {
 							$widgetHTML[$cat->name]['title'] = $title;
 						}
 					}
-                 endif;
+					endif;
 				} else {
 					// ! Separate categories: echo
 					echo $before_title;
